@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from calc.views import calc
+# from calc.views import calc
+from users.views import create_users
 
 urlpatterns = [
-    path('<int:number1>/<str:oper>/<int:number2>', calc),
+    # path('<int:number1>/<str:oper>/<int:number2>', calc),
+    path('<int:id>/<str:name>/<int:age>', create_users),
 ]
